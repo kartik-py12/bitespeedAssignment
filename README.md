@@ -17,9 +17,9 @@ This service provides an `/identify` endpoint that consolidates customer contact
 
 ## 🚀 Live Deployment
 
-**Live Endpoint**: [https://your-app-name.onrender.com](https://your-app-name.onrender.com)
+**Live Endpoint**: [https://bitespeedassignment-1nno.onrender.com/identify](https://bitespeedassignment-1nno.onrender.com/)
 
-The `/identify` endpoint is accessible at: `https://your-app-name.onrender.com/identify`
+The `/identify` endpoint is accessible at: `https://bitespeedassignment-1nno.onrender.com/identify`
 
 ## API Endpoints
 
