@@ -56,7 +56,8 @@ async function testAPI() {
         console.log(`✅ Success: ${JSON.stringify(result, null, 2)}`);
         successCount++;
       } else {
-        console.log(`❌ Error: ${result.error}`);
+        const errorResult = result as { error?: string };
+        console.log(`❌ Error: ${errorResult.error || 'Unknown error'}`);
         failCount++;
       }
     } catch (error) {
@@ -81,8 +82,8 @@ async function checkServer() {
     console.log('🔍 Checking server health...');
     const response = await fetch(`${baseURL}/health`);
     if (response.ok) {
-      const health = await response.json();
-      console.log('✅ Server is healthy:', health.service);
+      const health = await response.json() as { service?: string };
+      console.log('✅ Server is healthy:', health.service || 'Unknown service');
       console.log('🚀 Starting API tests...\n');
       await testAPI();
     } else {
