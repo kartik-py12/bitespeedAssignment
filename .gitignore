@@ -1,9 +1,11 @@
 node_modules/
 dist/
 *.log
+.env
 .env.local
 .env.development
-database.sqlite
+.env.production
+database.sqlite*
 .DS_Store
 *.pid
 coverage/
